@@ -1,0 +1,9 @@
+<div class="contain">
+    <div class="aside">
+        <i nz-icon [nzType]="dataList['icon']" nzTheme="fill"></i>
+    </div>
+    <div class="main">
+        <h3>{{dataList['title']}}</h3>
+        <p *ngFor="let item of dataList['content']" (click)="switchContent($event)" appBtn>{{item}}</p>
+    </div>
+</div>

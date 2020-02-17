@@ -1,0 +1,21 @@
+<div class="login_contain">
+    <div class="login_table">
+        <img src="" alt="">
+        <br />
+        <h3>饭饭管理平台</h3>
+        <br />
+        <br />
+        <nz-select [(ngModel)]="identity" nzAllowClear nzPlaceHolder="请选择登录身份" [ngStyle]="{'width':'100%'}">
+            <nz-option *ngFor="let item of identityList" nzValue={{item}} nzLabel={{item}} ></nz-option>
+        </nz-select>
+        <br />
+        <br />
+        <input nz-input placeholder="请输入用户名" [(ngModel)]="yhm" />
+        <br />
+        <br />
+        <input nz-input placeholder="请输入密码" [(ngModel)]="mm" />
+        <br />
+        <br />
+        <button nz-button nzType="primary" nzBlock (click)="toSignIn()">登录</button>
+    </div>
+</div>

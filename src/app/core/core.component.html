@@ -1,0 +1,21 @@
+<nz-layout [ngStyle]="{'height':'100%'}">
+    <nz-header >
+        <div class="logo"></div>
+        <span >fanfan管理平台</span>
+        <span (click)="logout()" appBtn>退出</span>
+    </nz-header>
+    <nz-layout>
+        <nz-sider nzWidth="200px" nzTheme="light" [ngStyle]="{'padding-top':'55px'}">
+            <app-sideblock *ngFor="let item of asideCatalogList" [dataList]="item" (tabSelected)="switchContent($event)">     
+            </app-sideblock>
+        </nz-sider>
+        <nz-layout class="inner-layout">
+            <nz-breadcrumb>
+                {{nowModule}}
+            </nz-breadcrumb>
+            <nz-content>
+                <app-mainblock [nowModule]="nowModule"></app-mainblock>
+            </nz-content>
+        </nz-layout>
+    </nz-layout>
+</nz-layout>

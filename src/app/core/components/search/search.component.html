@@ -1,0 +1,40 @@
+<div class="searchModule">
+    <div class="search_title">
+        <h3>搜索条件</h3>
+    </div>
+    <div nz-row class="search_option">
+        <div nz-col nzSpan="4" class="grid_cell">
+            <input nz-input placeholder="名称搜索" [(ngModel)]="name_search" />
+        </div>
+        <div nz-col nzSpan="4" class="grid_cell">
+            <input nz-input placeholder="购买时间搜索" [(ngModel)]="time_search" />
+
+        </div>
+        <div nz-col nzSpan="3" class="grid_cell">
+            <label>状态</label>
+            <nz-select [(ngModel)]="goods_state" nzAllowClear nzPlaceHolder="状态一" [ngStyle]="{'width':'100px'}">
+                <nz-option nzValue="状态一" nzLabel="状态一"></nz-option>
+                <nz-option nzValue="状态二" nzLabel="状态二"></nz-option>
+            </nz-select>
+        </div>
+        <div nz-col nzSpan="3" class="grid_cell">
+
+            <label>可见性</label>
+            <nz-select [(ngModel)]="visible" nzAllowClear nzPlaceHolder="可见"[ngStyle]="{'width':'100px'}" >
+                <nz-option nzValue="可见" nzLabel="可见"></nz-option>
+                <nz-option nzValue="不可见" nzLabel="不可见"></nz-option>
+            </nz-select>
+        </div>
+        <div nz-col nzSpan="3" class="grid_cell">
+            <label>每页显示</label>
+            <nz-select [(ngModel)]="page" nzAllowClear nzPlaceHolder="5" [ngStyle]="{'width':'80px'}">
+                <nz-option nzValue="5" nzLabel="5"></nz-option>
+                <nz-option nzValue="10" nzLabel="10"></nz-option>
+                <nz-option nzValue="15" nzLabel="15"></nz-option>
+            </nz-select>
+        </div>
+        <div nz-col nzSpan="3" class="grid_cell">
+            <button nz-button nzType="primary">确定</button>
+        </div>
+    </div>
+</div>

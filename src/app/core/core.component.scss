@@ -1,0 +1,31 @@
+  .logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 30px 16px 0;
+    float: left;
+  }
+
+  .logo~span{
+      color: rgb(233, 129, 129);
+      font-weight: bolder;
+      font-size: 22px;
+  }
+  .logo~span:nth-of-type(2){
+      font-size: 16px;
+      float: right;
+  }
+
+  .inner-layout {
+    padding: 0 24px 24px;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  nz-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+  }

@@ -1,0 +1,32 @@
+.search_title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 45px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 3px;
+    padding-left: 15px;
+    position: relative;
+    h3{
+        color: grey;
+        font-size: 18px;
+        //垂直居中
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%)
+    }
+}
+
+.search_option{
+    margin-top: 15px;
+    .grid_cell{
+        input{
+            width: 85%;
+        }
+        label{
+            font-weight: bolder;
+        }
+    }
+}
+ng-select{
+    width: 180px;
+}

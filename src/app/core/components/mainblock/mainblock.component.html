@@ -1,0 +1,75 @@
+<div *ngIf="nowModule=='用户分析'">
+    <h3>用户增长</h3>
+    <hr>
+    <br>
+    <p>本页根据昨日数据来计算，而非实时数据</p>
+    <br>
+    <div class="user_analysis">
+        <div class="grid_title">
+            <h3>昨日核心指标</h3>
+        </div>
+        <div nz-row>
+            <div nz-col nzSpan="8" class="grid_cell">
+                <h4>新用户注册</h4>
+                <p>100</p>
+            </div>
+            <div nz-col nzSpan="8" class="grid_cell">
+                <h4>昨日访问量</h4>
+                <p>100</p>
+            </div>
+            <div nz-col nzSpan="8" class="grid_cell">
+                <h4>累计注册</h4>
+                <p>520</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="nowModule=='文件管理'">
+    <app-search></app-search>
+    文件
+</div>
+<div *ngIf="nowModule=='用户管理'">
+    <app-search></app-search>
+    <div class="file_management">
+        <div class="table_title">
+            <h3>用户列表</h3>
+        </div>
+        <hr>
+        <nz-table #basicTable [nzData]="listOfData">
+            <thead>
+              <tr>
+                <th>用户头像</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>手机号</th>
+                <th>发布内容</th>
+                <th>注册时间</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of basicTable.data">
+                <td>
+                    <img [src]="data.usr_icon" alt="用户头像" [style]="{'width':'50px','height':'50px','border-radius':'25px'}">
+                </td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.gender }}</td>
+                <td>{{ data.phone }}</td>
+                <td>{{ data.publish_content }}</td>
+                <td>{{ data.registration_time }}</td>
+              </tr>
+            </tbody>
+          </nz-table>    
+    </div>
+</div>
+<div *ngIf="nowModule=='文案管理'">
+    文案管理
+</div>
+<div *ngIf="nowModule=='基本配置'">
+    基本配置
+</div>
+<div *ngIf="nowModule=='接入权限'">
+    接入权限
+</div>
+<div *ngIf="nowModule=='账户权限'">
+    账户权限
+</div>
